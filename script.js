@@ -3,6 +3,7 @@ $(window).on('load resize', function(){
         $('nav').css('justify-content','flex-start');
         $('.menu').css('display','none');
         $('#touch-menu__btn').css('display','flex');
+        $('.touch-menu').css('display','none');
     }
     else{
         $('nav').css('justify-content','center');
@@ -12,7 +13,7 @@ $(window).on('load resize', function(){
 });
 $(document).ready(function(){
     $('#touch-menu__btn').on('click',function(e){
-        $('.touch-menu').css('display','block');
+        $('.touch-menu').slideToggle('fast');
     });
     $('.touch-menu-items__item').on('click',function(e){
         $('.touch-menu').css('display','none');
